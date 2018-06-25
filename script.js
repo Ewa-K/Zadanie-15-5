@@ -1,4 +1,3 @@
-
 class App extends React.Component {
     constructor() {
         super();
@@ -24,8 +23,8 @@ class App extends React.Component {
     render() {
         return ( 
             <div>
-                <form className="form-inline form-group" onSubmit={ event => this.onSubmit(event) }>
-                    <label htmlFor="searchText">Search by user name </label> 
+                <form onSubmit={ event => this.onSubmit(event) }>
+                    <label htmlFor="searchText">Search by user name</label> 
                     <input 
                         type="text"
                         id="searchText"
@@ -57,7 +56,7 @@ class UsersList extends React.Component {
 class User extends React.Component {
     render() {
     return ( 
-        <div className="success">
+        <div>
             <img 
                 src={ this.props.user.avatar_url } 
                 style={ { maxWidth: '100px' } }/> 
