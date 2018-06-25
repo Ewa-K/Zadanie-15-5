@@ -53,13 +53,13 @@ var App = function (_React$Component) {
                 null,
                 React.createElement(
                     "form",
-                    { onSubmit: function onSubmit(event) {
+                    { className: "form-inline form-group", onSubmit: function onSubmit(event) {
                             return _this3.onSubmit(event);
                         } },
                     React.createElement(
                         "label",
                         { htmlFor: "searchText" },
-                        "Search by user name"
+                        "Search by user name "
                     ),
                     React.createElement("input", {
                         type: "text",
@@ -123,7 +123,7 @@ var User = function (_React$Component3) {
         value: function render() {
             return React.createElement(
                 "div",
-                null,
+                { className: "success" },
                 React.createElement("img", {
                     src: this.props.user.avatar_url,
                     style: { maxWidth: '100px' } }),
