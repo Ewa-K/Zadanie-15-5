@@ -5,3 +5,16 @@ div {
 img {
 	padding-left: 10px;
 }
+
+.root {
+	max-width: 1200px;
+	padding: 20px;
+}
+
+div div {
+	background-color: #E0FFFF;
+}
+
+label {
+	padding-left: 10px;
+}
