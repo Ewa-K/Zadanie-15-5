@@ -1,7 +1,3 @@
-ReactDOM.render( 
-    <App/>,
-    document.getElementById('root')
-);
 
 class App extends React.Component {
     constructor() {
@@ -43,34 +39,40 @@ class App extends React.Component {
 }
 
 class UsersList extends React.Component {
-        get users() {
-            return this.props.users.map(user => <User 
-                key={ user.id } 
-                user={ user }/>);
-            }
+    get users() {
+        return this.props.users.map(user => <User 
+            key={ user.id } 
+            user={ user }/>);
+    }
 
-            render() {
-                return ( 
-                    <div> 
-                        { this.users } 
-                    </div>
-                );
-            }
-        }
+    render() {
+        return ( 
+             <div> 
+                { this.users } 
+            </div>
+        );
+    }
+}
 
-        class User extends React.Component {
-            render() {
-                return ( 
-                    <div>
-                        <img 
-                            src={ this.props.user.avatar_url } 
-                            style={ { maxWidth: '100px' } }/> 
-                        <a 
-                            href={ this.props.user.html_url } 
-                            target="_blank"> 
-                            { this.props.user.login }
-                        </a> 
-                    </div>
-                );
-            }
-        }
+class User extends React.Component {
+    render() {
+    return ( 
+        <div>
+            <img 
+                src={ this.props.user.avatar_url } 
+                style={ { maxWidth: '100px' } }/> 
+            <a 
+                href={ this.props.user.html_url } 
+                target="_blank"> 
+                { this.props.user.login }
+            </a> 
+        </div>
+    );
+    }
+}
+
+
+ReactDOM.render( 
+    <App/>,
+    document.getElementById('root')
+);
