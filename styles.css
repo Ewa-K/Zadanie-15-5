@@ -11,7 +11,7 @@ img {
 	padding: 20px;
 }
 
-div > div {
+div > div > div > div {
 	background-color: #E0FFFF;
 	margin: 10px 0;
 }
